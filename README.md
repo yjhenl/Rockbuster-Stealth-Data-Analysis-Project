@@ -31,7 +31,7 @@ Tools: ```pgAdmin 4```, ```PostgreSQL```, ```DbVisualizer (RDBMS)```
 
 Skills: ```SQL (Join, Subqueries, CTE etc.)```
 
-Data set: [Rockbuster Datasets](D:\Data Analyst\Task 3\dvdrental.zip)
+Data set: [Rockbuster Datasets](https://drive.google.com/drive/u/0/my-drive)
 
 ## Data Visualization
 Visualization of the project in Tableau: [Presenting SQL Results](https://public.tableau.com/app/profile/yi.jhen.li/viz/RockbusterSalesAnalysis/Story1) 

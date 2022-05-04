@@ -27,9 +27,11 @@ The Rockbuster Stealth Management Board has asked a series of business questions
 ```
 
 ## Resources
-Tools: pgAdmin 4, PostgreSQL, DbVisualizer (RDBMS)
+Tools: ```pgAdmin 4```, ```PostgreSQL```, ```DbVisualizer (RDBMS)```
 
-Data set: http://www.postgresqltutorial.com/wp-content/uploads/2019/05/dvdrental.zip
+Skills: ```SQL (Join, Subqueries, CTE etc.)```
 
-## Data Visualisation
-Here is the link to view the visuals from the project in Tableau: https://public.tableau.com/app/profile/kerim.zengin/viz/Task3_10-PresentingSQLResults/Story1
+Data set: [Rockbuster Datasets](D:\Data Analyst\Task 3\dvdrental.zip)
+
+## Data Visualization
+Visualization of the project in Tableau: [Presenting SQL Results](https://public.tableau.com/app/profile/yi.jhen.li/viz/RockbusterSalesAnalysis/Story1) 

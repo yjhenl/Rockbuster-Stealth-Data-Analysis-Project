@@ -27,7 +27,7 @@ The Rockbuster Stealth Management Board has asked a series of business questions
 ```
 
 ## Resources
-Tools: pgAdmin 4, PostgreSQL, relational database management systems (RDBMS) DB visulaizer???
+Tools: pgAdmin 4, PostgreSQL, DbVisualizer (RDBMS)
 
 Data set: http://www.postgresqltutorial.com/wp-content/uploads/2019/05/dvdrental.zip
 

@@ -33,5 +33,6 @@ Skills: ```SQL (Join, Subqueries, CTE etc.)```
 
 Data set: [Rockbuster Datasets](https://drive.google.com/drive/u/0/my-drive)
 
+
 ## Data Visualization
 Visualization of the project in Tableau: [Presenting SQL Results](https://public.tableau.com/app/profile/yi.jhen.li/viz/RockbusterSalesAnalysis/Story1) 

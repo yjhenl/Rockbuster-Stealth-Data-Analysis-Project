@@ -25,10 +25,10 @@ The Rockbuster Stealth Management Board has asked a series of business questions
 
 ● Do sales figures vary between geographic regions?
 
-Resources
+## Resources
 Program used: pgAdmin 4
 
 Data set: http://www.postgresqltutorial.com/wp-content/uploads/2019/05/dvdrental.zip
 
-Data Visualisation
+## Data Visualisation
 Here is the link to view the visuals from the project in Tableau: https://public.tableau.com/app/profile/kerim.zengin/viz/Task3_10-PresentingSQLResults/Story1

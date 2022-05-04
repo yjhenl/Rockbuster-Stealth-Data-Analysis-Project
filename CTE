@@ -1,0 +1,41 @@
+##Here is a SQL query with a Common Table Expression to collect the total amount paid by the top 5 spending customers.##
+
+WITH average_amount_paid_cte (customer_id, first_name, last_name, city, country) AS
+		(SELECT B.customer_id, -- this is the subquery to collected the total amount paid by the top 5 customers
+	 		B.first_name, 
+	 		B.last_name,
+	 		D.city,
+	 		E.country,
+	 		SUM(A.amount) AS total_amount_paid
+	 	FROM payment A
+	 	INNER JOIN customer B ON A.customer_id = B.customer_id
+		INNER JOIN address C ON B.address_id = C.address_id
+	 	INNER JOIN city D ON C.city_id = D.city_id
+	 	INNER JOIN country E ON D.country_id = E.country_id
+	 	WHERE city IN ('Aurora', 
+				  'Atlixco', 
+				  'Xintai', 
+				  'Adoni', 
+				  'Dhule (Dhulia)', 
+				  'Kurashiki', 
+				  'Pingxiang',
+				  'Sivas',
+				  'Celaya',
+				  'So Leopoldo')
+	 	GROUP BY B.customer_id, B.first_name, B.last_name, city, country
+	 	ORDER BY total_amount_paid DESC
+	 	LIMIT 5)
+    
+SELECT customer_id, -- This is the main query to find the average amount paid for the top 5 customers.
+	   first_name,
+	   last_name,
+	   city,
+	   country,
+	   CAST(AVG(total_amount_paid) AS DECIMAL (12,2)) AS average
+FROM average_amount_paid_cte
+GROUP BY customer_id,
+		 first_name,
+		 last_name,
+		 city,
+		 country
+ORDER BY average DESC;

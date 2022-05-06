@@ -1,34 +1,47 @@
--- 1. This is the SQL subquery to find out the average amount paid by the top 5 customers. 
+
+-- 1. This is a SQL subquery to find out the average amount paid by the top 5 customers. 
 
 
-SELECT
-AVG (total_amount_paid) as average_amount_paid_by_top5_customers
+SELECT 	   total_amount_paid.customer_id,
+	   total_amount_paid.first_name,
+	   total_amount_paid.last_name,
+	   total_amount_paid.city,
+	   total_amount_paid.country,
+	   AVG(total_amount_paid.total_amount_paid) as average_amount_paid_by_top5_customers
+	   
 
 FROM
-(SELECT A.customer_id,
-	B.first_name,
-	B.last_name,
-	D.city,
-	E.country,
-	SUM(amount) AS total_amount_paid
+	(SELECT A.customer_id,
+		B.first_name,
+		B.last_name,
+		D.city,
+		E.country,
+		SUM(amount) AS total_amount_paid
 
-FROM payment A
-INNER JOIN customer B ON A.customer_id = B.customer_id
-INNER JOIN address C ON B.address_id = C.address_id
-INNER JOIN city D ON C.city_id = D.city_id
-INNER JOIN country E ON D.country_ID = E.country_ID
-WHERE country IN
-('India','China','United States','Japan','Mexico','Brazil','Russian Federation','Philippines','Turkey','Indonesia')
-AND city IN
-('Aurora','Atlixco','Xintai','Adoni','Dhule(Dhulia)','Kurashiki','Pingxiang','Sivas','Celaya','So Leopoldo')
+	FROM payment A
+	INNER JOIN customer B ON A.customer_id = B.customer_id
+	INNER JOIN address C ON B.address_id = C.address_id
+	INNER JOIN city D ON C.city_id = D.city_id
+	INNER JOIN country E ON D.country_ID = E.country_ID
+	WHERE country IN
+	('India','China','United States','Japan','Mexico','Brazil','Russian Federation','Philippines','Turkey','Indonesia')
+	AND city IN
+	('Aurora','Atlixco','Xintai','Adoni','Dhule(Dhulia)','Kurashiki','Pingxiang','Sivas','Celaya','So Leopoldo')
 
-GROUP BY A.customer_id,
-	 B.first_name,
-	 B.last_name,
-	 E.country,
-	 D.city
-ORDER BY SUM(amount) DESC
-LIMIT 5) AS average
+	GROUP BY A.customer_id,
+		 B.first_name,
+	 	 B.last_name,
+	 	 E.country,
+		 D.city
+ 	ORDER BY total_amount_paid DESC
+	LIMIT 5) AS total_amount_paid
+	
+GROUP BY total_amount_paid.customer_id,
+	 total_amount_paid.first_name,
+	 total_amount_paid.last_name,
+	 total_amount_paid.city,
+	 total_amount_paid.country
+ORDER BY average DESC;
 
 
 ################################################################################

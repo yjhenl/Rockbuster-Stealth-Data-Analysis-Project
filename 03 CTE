@@ -30,9 +30,12 @@ SELECT
 AVG (total_amount_paid) AS average_amount_paid_by_top5_customers
 FROM top_5_customers_payment_info
 
+
 ################################################################################
 
+
 -- 2. Here is the SQL query with Common Table Expression to find out how many of the top 5 customers are based within each country.
+
 
 WITH
 top_5_customers_payment_info(customer_id,first_name,last_name,city,country,total_amount_paid) AS
@@ -72,6 +75,5 @@ LEFT JOIN city ON address.city_id = city.city_id
 LEFT JOIN country ON city.country_id = country.country_id
 GROUP BY country.country
 ORDER BY all_customer_count DESC
-
 
 

@@ -1,4 +1,5 @@
--- 1. Here is the SQL query with Common Table Expression to find out the average amount paid by the top 5 customers.
+
+-- 1. Here is a SQL query with Common Table Expression to find out the average amount paid by the top 5 customers.
 
 
 WITH
@@ -34,7 +35,7 @@ FROM top_5_customers_payment_info
 ################################################################################
 
 
--- 2. Here is the SQL query with Common Table Expression to find out how many of the top 5 customers are based within each country.
+-- 2. Here is a SQL query with Common Table Expression to find out how many of the top 5 customers are based within each country.
 
 
 WITH

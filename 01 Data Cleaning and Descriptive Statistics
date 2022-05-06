@@ -1,9 +1,18 @@
-## These queries were to perform simple descriptive statistics for the film and customer table ##
-
-
 /*
-SELECTS and finds the min, max and average values for the release_year column within the film table
+These queries were to find out if the film table and the customer table contain any dirty data, specifically non-uniform or duplicate data, or missing values.
 */
+
+
+-- 1. Finding duplicates
+
+SELECT 
+
+
+
+
+
+SELECTS and finds the min, max and average values for the release_year column within the film table
+
 
 SELECT MIN (release_year) AS min_release_year,
 	        MAX (release_year) AS max_release_year,

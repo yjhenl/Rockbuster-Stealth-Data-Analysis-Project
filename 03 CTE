@@ -30,7 +30,7 @@ SELECT
 AVG (total_amount_paid) AS average_amount_paid_by_top5_customers
 FROM top_5_customers_payment_info
 
-
+################################################################################
 
 -- 2. Here is the SQL query with Common Table Expression to find out how many of the top 5 customers are based within each country.
 

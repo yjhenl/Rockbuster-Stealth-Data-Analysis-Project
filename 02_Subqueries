@@ -2,12 +2,7 @@
 -- 1. This is a SQL subquery to find out the average amount paid by the top 5 customers. 
 
 
-SELECT 	   total_amount_paid.customer_id,
-	   total_amount_paid.first_name,
-	   total_amount_paid.last_name,
-	   total_amount_paid.city,
-	   total_amount_paid.country,
-	   AVG(total_amount_paid.total_amount_paid) as average_amount_paid_by_top5_customers
+SELECT 	AVG(total_amount_paid.total_amount_paid) as average_amount_paid_by_top5_customers
 	   
 
 FROM
@@ -36,18 +31,12 @@ FROM
  	ORDER BY total_amount_paid DESC
 	LIMIT 5) AS total_amount_paid
 	
-GROUP BY total_amount_paid.customer_id,
-	 total_amount_paid.first_name,
-	 total_amount_paid.last_name,
-	 total_amount_paid.city,
-	 total_amount_paid.country
-ORDER BY average DESC;
 
 
 ################################################################################
 
 
--- 2. This is the SQL subquery to find out how many of the top 5 customers are based within each country.
+-- 2. This is a SQL subquery to find out how many of the top 5 customers are based within each country.
 
 
 SELECT country.country,
@@ -86,5 +75,7 @@ LEFT JOIN country ON city.country_id = country.country_id
 
 GROUP BY country.country
 ORDER BY all_customer_count DESC
+LIMIT 5
+
 
 

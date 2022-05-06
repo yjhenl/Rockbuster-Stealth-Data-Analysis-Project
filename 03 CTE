@@ -1,4 +1,4 @@
-###### Here is a SQL query with a Common Table Expression to Find the average amount paid by the top 5 customers.
+-- Here is a SQL query with a Common Table Expression to Find the average amount paid by the top 5 customers.
 
 
 WITH average_amount_paid_cte (customer_id, first_name, last_name, city, country) AS

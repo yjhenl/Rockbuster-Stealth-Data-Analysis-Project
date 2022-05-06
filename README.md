@@ -24,7 +24,7 @@ Tools: ```pgAdmin 4```, ```PostgreSQL```, ```DbVisualizer (RDBMS)```
 
 Skills: ```SQL (Join, Subqueries, CTE etc.)```
 
-Data set: [Rockbuster Datasets](https://drive.google.com/drive/u/0/my-drive)
+Dataset: [Rockbuster Datasets](https://drive.google.com/drive/u/0/my-drive)
 
 
 ## Data Visualization
